@@ -484,6 +484,7 @@ body.menu-open::after {
     font-weight: lighter;
     margin-top: -13px;
     padding-left: 2%;
+    line-height: 3%;
 }
 .recent-post-head{
     margin-top: 2px;
