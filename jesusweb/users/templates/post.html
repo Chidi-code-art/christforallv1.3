@@ -58,7 +58,9 @@
             <!-- Image Post Display -->
             {% if post.image_head %}
                 <img src="{{ post.image_head.url }}" alt="{{ post.post_title }}" class="recent_post_img">
-                <h4>{{ post.image_credit }}</h4>
+                {% if post.image_credit %}
+                    <p class="image-credit">Image credit: {{ post.image_credit }}</p>
+                {% endif %}
             {% else %}
                 <div class="no-media">No media available</div>
             {% endif %}

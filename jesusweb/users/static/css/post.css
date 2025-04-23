@@ -238,6 +238,11 @@ body.menu-open::after {
     border-radius: 10px;
     object-fit: cover;
 }
+.image-credit {
+    font-size: 0.85rem;
+    color: #888;
+    font-style: italic;
+}
 
 .banner-disc {
     width: 90%;
