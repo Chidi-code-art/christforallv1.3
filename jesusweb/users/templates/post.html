@@ -33,12 +33,12 @@
 <!-- Added side menu (place before closing body tag) -->
 <div class="side-menu">
     <div class="side-menu-content">
-        <a href="http://127.0.0.1:8000/" class="side-nav-link"><h5>Home</h5></a>
-        <a href="http://127.0.0.1:8000/#nextBtn" class="side-nav-link"><h5>Videos</h5></a>
-        <a href="http://127.0.0.1:8000/#about-us" class="side-nav-link"><h5>Sermons</h5></a>
+        <a href="{% url 'home' %}" class="side-nav-link"><h5>Home</h5></a>
+        <a href="{% url 'home' %}#nextBtn" class="side-nav-link"><h5>Videos</h5></a>
+        <a href="{% url 'home' %}#about-us" class="side-nav-link"><h5>Sermons</h5></a>
         <a href="https://paystack.com/pay/donationpge" class="side-nav-link"><h5>Donate</h5></a>
-        <a href="http://127.0.0.1:8000/users/login/" class="side-nav-link"><h5>Log in</h5></a>
-        <a href="http://127.0.0.1:8000/users/signup/" class="side-nav-link"><h5>Sign up</h5></a>
+        <a href="{% url 'login' %}" class="side-nav-link"><h5>Log in</h5></a>
+        <a href="{% url 'signup' %}" class="side-nav-link"><h5>Sign up</h5></a>
     </div>
 </div>
 
@@ -58,6 +58,7 @@
             <!-- Image Post Display -->
             {% if post.image_head %}
                 <img src="{{ post.image_head.url }}" alt="{{ post.post_title }}" class="recent_post_img">
+                <h4>{{ post.image_credit }}</h4>
             {% else %}
                 <div class="no-media">No media available</div>
             {% endif %}

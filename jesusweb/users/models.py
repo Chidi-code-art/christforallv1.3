@@ -20,6 +20,7 @@ class Admin_dash(models.Model):
     image_head = models.ImageField(upload_to='postings/', null=True, blank=True)
     video_head = models.FileField(upload_to='videos/', null=True, blank=True)
     slug = models.SlugField(max_length=250, unique_for_date='post_date', default='default-slug')
+    image_credit = models.CharField(max_length=255)
     post_title = models.CharField(max_length=255)
     post_content = CKEditor5Field(default="Default body")
     post_date = models.DateTimeField(auto_now_add=True)
